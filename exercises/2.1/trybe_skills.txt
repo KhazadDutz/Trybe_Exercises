@@ -8,5 +8,6 @@ Lógica de Programação
 Web Storage
 DOM
 JavaScript
-GitHubForms
+GitHub
+Forms
 Flexbox
