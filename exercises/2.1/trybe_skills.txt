@@ -3,5 +3,6 @@ Bash
 Git
 HTML
 CSS
-InternetjavaScript
+Internet
+JavaScript
 GitHub
