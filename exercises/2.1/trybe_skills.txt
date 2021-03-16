@@ -4,3 +4,5 @@ Git
 HTML
 CSS
 Internet
+JavaScript
+GitHub
