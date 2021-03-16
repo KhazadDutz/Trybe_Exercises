@@ -3,6 +3,9 @@ Bash
 Git
 HTML
 CSS
-InternetLógica de Programação
+Internet
+Lógica de Programação
 Web Storage
 DOM
+JavaScript
+GitHub
