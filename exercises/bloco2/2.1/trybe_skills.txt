@@ -1,0 +1,13 @@
+Unix
+Bash
+Git
+HTML
+CSS
+Internet
+Lógica de Programação
+Web Storage
+DOM
+JavaScript
+GitHub
+Forms
+Flexbox
