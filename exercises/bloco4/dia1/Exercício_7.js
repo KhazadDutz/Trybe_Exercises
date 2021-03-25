@@ -1,4 +1,4 @@
-let Porcentagem = 1;
+let Porcentagem = 76;
 if (Porcentagem < 0 || Porcentagem > 100) {
   console.log('Insira um número entre 0 - 100')
 }else if (Porcentagem >= 90) {
