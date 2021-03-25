@@ -10,4 +10,3 @@ if (salarioBruto <= 1556.94) {
   console.log(salarioBruto - 570.88);
 }
 
-let salarioBase = 
