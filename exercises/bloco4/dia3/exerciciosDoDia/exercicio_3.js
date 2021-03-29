@@ -1,17 +1,12 @@
 let n = 5;
-let symbol = '*';
-let inputLine = '';
-let inputPosition = n;
+let ast = '';
+let esp = '';
 
-for (let lineIndex = 0; lineIndex < n; lineIndex += 1) {
-  for (let columnIndex = 0; columnIndex <= n; columnIndex += 1) {
-    if (columnIndex < inputPosition) {
-      inputLine = inputLine + ' ';
-    } else {
-      inputLine = inputLine + symbol;
-    }
-  }
-  console.log(inputLine);
-  inputLine = '';
-  inputPosition -= 1;
-};
+for (let index = 0; index < n; index += 1){
+  ast += '*';
+  for (let index = 0; index < n - ast.length; index += 1){
+    esp += ' ';
+}
+console.log(esp + ast);
+esp = '';
+}
