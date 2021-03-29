@@ -12,19 +12,12 @@ let info2 = {
   recorrente: 'Sim'
 };
 
-// 5.Agora, defina um segundo objeto com a mesma estrutura (as mesmas chaves) do primeiro e os seguintes valores: 'Tio Patinhas', 'Christmas on Bear Mountain, Dell's Four Color Comics #178', 'O último MacPatinhas', 'Sim'. Então, imprima os valores de cada objeto juntos de acordo com cada uma das chaves.
-
-// Valor esperado no console:
-// Copiar
-// Margarida e Tio Patinhas
-// Pato Donald e Christmas on Bear Mountain, Dell's Four Color Comics #178
-// Namorada do personagem principal nos quadrinhos do Pato Donald e O último MacPatinhas
-// Ambos recorrentes // Atenção para essa última linha!
-
-// for (let key in info, info2) {
-//   if (info.recorrente[key] === info2.recorrente[key]) {
-    
-//   }
-//   console.log(info[key] + ' e ' + info2[key]);
-// }
-
+for (let index in info) {
+  if (info[index] === info2[index] &&
+    info[index] === 'Sim' &&
+    info2[index] === 'Sim'){
+    console.log('Ambos Recorrentes');
+  }else{
+    console.log(info[index] + ' e ' + info2[index]);
+  }
+}
