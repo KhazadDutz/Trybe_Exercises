@@ -38,18 +38,39 @@
     document.querySelector('#pai').children[2];
     // 9.Crie um irmão para elementoOndeVoceEsta.
       // cria uma div brotherOfElementoOndeVoceEsta.
-    let brother = document.createElement('div');
+      let brother = document.createElement('div');
       // coloca um texto dentro dessa div.
-    brother.innerText = 'Texto para a div irmão de elementoOndeVoceEsta.';
+      brother.innerText = 'Texto para a div irmão de elementoOndeVoceEsta.';
       // cria um ID para a div brotherOfElementoOndeVoceEsta.
-    brother.id = 'brotherOfElementoOndeVoceEsta';
+      brother.id = 'brotherOfElementoOndeVoceEsta';
       // chamando a div pai do html.
-    let paiDiv = document.querySelector('#pai');
+      let paiDiv = document.querySelector('#pai');
       // adiciona a div brotherOfElementoOndeVoceEsta na div pai.
-    paiDiv.appendChild(brother);
+      paiDiv.appendChild(brother);
     // 10.Crie um filho para elementoOndeVoceEsta.
-    let firstChild = document.createElement('div');
-    
+      // cria um p qualquer.
+      let firstChild = document.createElement('p');
+      // coloca um texto no p criado.
+      firstChild.innerText = 'qualquer coisa pra fazer volume.';
+      // cria uma ID para o p criado.
+      firstChild.id = 'firstChildParagraph';
+      // chama a div pai que eu quero colocar o P.
+      let brotherDiv = document.querySelector('#brotherOfElementoOndeVoceEsta');
+      // adiciona o P como filho da div brotherOfElementoOndeVoceEsta.
+      brotherDiv.appendChild(firstChild);
+    // 11.Crie um filho para primeiroFilhoDoFilho.
+      // cria um P qualquer.
+      let firstChildOfChild = document.createElement('p');
+      // colocar um texto dentro do P criado.
+      firstChildOfChild.innerText = 'primeiro filho do filho.'
+      // criar um ID para o P.
+      firstChildOfChild.id = 'firstChildOfChild'
+      // chama a div que será o pai do P.
+      let pFather = document.querySelector('#primeiroFilhoDoFilho');
+      // adiciona o P firstChildOfChild na div primeiroFilhoDoFilho.
+      pFather.appendChild(firstChildOfChild);
+    // 12.A partir desse filho criado, acesse terceiroFilho.
+    document.querySelector('#firstChildOfChild').parentElement.parentElement.nextElementSibling;
   </script>
 </body>
 </html>
