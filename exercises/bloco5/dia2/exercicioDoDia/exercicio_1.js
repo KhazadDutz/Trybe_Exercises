@@ -40,14 +40,27 @@ for (let number of values) {
 // 9.Adicione 3 tags h3 , todas sendo filhas do div criado no passo 2.
 for (let index = 1; index <= 3; index += 1) {
   let tagH3 = document.createElement('h3');
-  tagH3.className = 'description';
   mainContent.appendChild(tagH3);
 }
 // 10.Adicione a classe title na tag h1 criada;
-document.getElementsByTagName('h1')[0].className = 'title';
+let classNameForTitle = document.getElementsByTagName('h1')[0];
+classNameForTitle.className = 'title';
 // 11.Adicione a classe description nas 3 tags h3 criadas;
-
+let classNameForAllH3 = document.getElementsByTagName('h3');
+for (let current of classNameForAllH3) {
+  current.className = 'description';
+}
 // 12.Remova o div criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild() ;
-// 13.Centralize o div criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto do div ;
+let divLeftContent = document.getElementsByClassName('left-content')[0];
+mainContent.removeChild(divLeftContent);
+// mainContent.removeChild(leftContent);
+// 13.Centralize o div criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto do div;
+let divRightContent = document.getElementsByClassName('right-content')[0];
+divRightContent.style.marginRight = 'auto'
+// rightContent.style.marginRight = 'auto';
 // 14.Troque a cor de fundo do elemento pai da div criada no passo 3 (aquela que possui a classe center-content ) para a cor verde;
+let divCenterContentFathers = document.getElementsByClassName('center-content')[0];
+divCenterContentFathers.parentElement.style.backgroundColor = 'green';
 // 15.Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
+unorderedList.lastChild.remove();
+unorderedList.lastChild.remove();
