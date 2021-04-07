@@ -1,0 +1,15 @@
+// 1.Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body;
+let titleH1 = document.createElement('h1');
+titleH1.innerHTML = 'Exercício 5.2 - JavaScript DOM';
+titleH1.id = 'main-title';
+let body = document.querySelector('body');
+body.appendChild(titleH1);
+// 2.Adicione a tag div com a classe main-content como filho da tag body;
+let mainContent = document.createElement('div');
+mainContent.className = 'main-content';
+body.appendChild(mainContent);
+// 3.Adicione a tag div com a classe center-content como filho da tag div criada no passo 2;
+let centerContent = document.createElement('div');
+centerContent.className = 'center-content';
+mainContent.appendChild(centerContent);
+// 4.Adicione a tag p como filho do div criado no passo 3 e coloque algum texto;
