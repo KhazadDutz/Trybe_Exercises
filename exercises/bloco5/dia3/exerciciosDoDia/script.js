@@ -71,13 +71,13 @@ createSextaFeiraButton(stringSexta);
 // É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial exibindo os dias.
 let fridayButton = document.querySelector('#btn-friday');
 let sextouDays = document.querySelectorAll('.friday');
-let sextouDois = [4, 11, 18, 25];
+
 fridayButton.addEventListener('click', function() {
-  for (let day of sextouDays) {
-    if (day.innerText === 'Sextou!!!') {
-    day.innerText = '4';
+  for (let index = 0; index < sextouDays.length; index += 1) {
+    if (sextouDays[index].innerText !== 'Sextou!!!') {
+    sextouDays[index].innerText = 'Sextou!!!';
   } else {
-    day.innerText = 'Sextou!!!';
+    sextouDays[index].innerText = parseInt(sextouDays[index].nextElementSibling.innerText) -1;
     }
   }
 });
@@ -86,21 +86,17 @@ fridayButton.addEventListener('click', function() {
 // Dica - Propriedade: event.target .
 
 function dayMouseOver() {
-  let zoomOnDays = document.querySelector('.days');
+  let zoomOnDays = document.querySelector('#days');
   zoomOnDays.addEventListener('mouseover', function(e) {
-    if (e.target === zoomOnDays) {
       e.target.style.fontSize = 'xx-large';
       e.target.style.fontWeight ='900';
-    }
   })
 };
 function dayMouseOut() {
-  let zoomOnDays = document.querySelector('.days');
+  let zoomOnDays = document.querySelector('#days');
   zoomOnDays.addEventListener('mouseout', function(e) {
-    if (e.target === zoomOnDays) {
       e.target.style.fontSize = '20px';
       e.target.style.fontWeight = '200'
-    }
   })
 };
 dayMouseOver();
@@ -133,13 +129,29 @@ taskSubtitle('lightblue');
 // Exercício 9:
 // Implemente uma função que adiciona um evento que ao clicar no elemento com a tag <div> referente a cor da sua tarefa, atribua a este elemento a classe task selected , ou seja, quando sua tarefa possuir a classe task selected ela estará selecionada.
 // Ao clicar novamente no elemento a sua classe deverá voltar a ser somente task , ou seja, esta tarefa está deixando de ser uma tarefa selecionada.
-function selectTask() {
-  
-};
+
+let clickTaskElement = document.querySelector('.task');
+clickTaskElement.addEventListener('click', function() {
+  if (clickTaskElement.className !== 'task selected') {
+    clickTaskElement.classList.add('selected');
+  } else if (clickTaskElement.className !== 'task') {
+    clickTaskElement.classList.remove('selected');
+  }  
+});
 // Exercício 10:
 // Implemente uma função que adiciona um evento que ao clicar em um dia do mês no calendário, atribua a este dia a cor da legenda da sua tarefa selecionada.
 // Ao clicar novamente no dia com a cor da legenda, a sua cor deverá voltar à configuração inicial rgb(119,119,119).
-
+let daysContainer = document.querySelector('.days-container');
+let clickColor = document.querySelector('.task');
+daysContainer.addEventListener('click', function(e) {
+  if (clickColor.className === 'task selected') {
+    if (e.target.style.color !== clickColor.style.backgroundColor) {
+      e.target.style.color = clickColor.style.backgroundColor;
+    } else if (e.target.style.color === clickColor.style.backgroundColor) {
+      e.target.style.color = 'rgb(119,119,119)';
+    }
+  }
+});
 // Bônus:
 // Vamos adicionar compromissos ao seu calendário? Implemente uma função que, ao digitar um compromisso na caixa de texto "COMPROMISSOS", adiciona o item à lista "MEUS COMPROMISSOS" ao clicar no botão "ADICIONAR".
 // Se nenhum caractere for inserido no campo input , a função deve retornar um alert com uma mensagem de erro ao clicar em "ADICIONAR".
