@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
 <body>
   <form action="">
     <fieldset>
+      <legend>Dados Pessoais</legend>
       <p>Nome</p>
       <label for="input-nome"><input type="text" name="nome" id="input-nome" placeholder="insira seu nome" maxlength="40" autocomplete="off" required>
       </label>
@@ -16,7 +18,7 @@
       <label for="input-email"><input type="text" name="email" id="input-email" placeholder="insira seu e-mail" maxlength="50" autocomplete="off" required>
       </label>
       <p>CPF</p>
-      <label for="input-cpf"><input type="number" name="cpf" id="input-cpf" placeholder="insira seu CPF" maxlength="11" autocomplete="off" required>
+      <label for="input-cpf"><input type="text" name="cpf" id="input-cpf" placeholder="insira seu CPF" maxlength="11" autocomplete="off" required>
       </label>
       <p>Endereço</p>
       <label for="input-endereco"><input type="text" name="endereco" id="input-endereco" placeholder="insira seu endereço" maxlength="200" autocomplete="off" required>
@@ -27,7 +29,31 @@
       <p>Estado</p>
       <label><Select id="dropDownEstados"></Select>
       </label>
+      <p>Tipo</p>
+      <label for="name">
+        <input type="radio" name="residencia">Casa
+        <input type="radio" name="residencia">Apartamento
+      </label>
+    </fieldset>
+    <fieldset id="teste">
+      <legend>Dados do último emprego</legend>
+      <p>Resumo do Currículo</p>
+      <label for="">
+        <textarea name="resume" class="text-area" id="input-resumo-currículo" cols="" rows="5" maxlength="1000" required autocomplete="off"></textarea>
+      </label>
+      <p>Cargo</p>
+      <label for="">
+        <input type="text" name="cargo" id="input-cargo" maxlength="40" autocomplete="off" required>
+      </label>
+      <p>Descrição do cargo</p>
+      <label>
+        <textarea name="desc-cargo" class="text-area" id="input-desc-cargo" maxlength="500" cols="" rows="5" autocomplete="off" required></textarea>
+      </label>
+      <label for="">Data de Início
+        <input type="text" name="data-inicio" id="input-data-inicio" autocomplete="off" required min="1">
+      </label>
     </fieldset>
   </form>
+  <script src="script.js"></script>
 </body>
 </html>

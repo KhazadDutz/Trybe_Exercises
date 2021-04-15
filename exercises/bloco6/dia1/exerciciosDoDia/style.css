@@ -1,0 +1,8 @@
+.text-area {
+  width: 99%;
+  resize: vertical;
+}
+
+#teste {
+  max-width: auto;
+}
