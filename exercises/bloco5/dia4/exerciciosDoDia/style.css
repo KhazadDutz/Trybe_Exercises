@@ -1,17 +1,12 @@
 body {
   margin: 10px;
 }
-.preferences {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  border: 1px solid green;
+
+.darkMode {
+  background-color: #01263a;
+  color: #c3c4c7;
 }
-.options {
-  display: flex;
-  flex-direction: column;
-}
+
 .title {
   display: flex;
   justify-content: center;
