@@ -10,7 +10,22 @@
   <form action="">
     <fieldset>
       <p>Nome</p>
-      <label for=""><input type="text" name="nome" id="input-nome">
+      <label for="input-nome"><input type="text" name="nome" id="input-nome" placeholder="insira seu nome" maxlength="40" autocomplete="off" required>
+      </label>
+      <p>Email</p>
+      <label for="input-email"><input type="text" name="email" id="input-email" placeholder="insira seu e-mail" maxlength="50" autocomplete="off" required>
+      </label>
+      <p>CPF</p>
+      <label for="input-cpf"><input type="number" name="cpf" id="input-cpf" placeholder="insira seu CPF" maxlength="11" autocomplete="off" required>
+      </label>
+      <p>Endereço</p>
+      <label for="input-endereco"><input type="text" name="endereco" id="input-endereco" placeholder="insira seu endereço" maxlength="200" autocomplete="off" required>
+      </label>
+      <p>Cidade</p>
+      <label for="input-cidade"><input type="text" name="cidade" id="input-cidade" placeholder="insira sua cidade" maxlength="28" autocomplete="off" required>
+      </label>
+      <p>Estado</p>
+      <label><Select id="dropDownEstados"></Select>
       </label>
     </fieldset>
   </form>
