@@ -4,61 +4,106 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="bulma/css/bulma.css">
   <title>Document</title>
 </head>
 <body>
-  <form action="">
-    <fieldset>
-      <legend>Dados Pessoais</legend>
-      <p>Nome</p>
-      <label for="input-nome"><input class="inputText" type="text" name="nome" id="input-nome" placeholder="insira seu nome" maxlength="40" autocomplete="off" required>
-      </label>
-      <p>Email</p>
-      <label for="input-email"><input class="inputText" type="text" name="email" id="input-email" placeholder="insira seu e-mail" maxlength="50" autocomplete="off" required>
-      </label>
-      <p>CPF</p>
-      <label for="input-cpf"><input class="inputText" type="text" name="cpf" id="input-cpf" placeholder="insira seu CPF" maxlength="11" autocomplete="off" required>
-      </label>
-      <p>Endereço</p>
-      <label for="input-endereco"><input class="inputText" type="text" name="endereco" id="input-endereco" placeholder="insira seu endereço" maxlength="200" autocomplete="off" required>
-      </label>
-      <p>Cidade</p>
-      <label for="input-cidade"><input class="inputText" type="text" name="cidade" id="input-cidade" placeholder="insira sua cidade" maxlength="28" autocomplete="off" required>
-      </label>
-      <p>Estado</p>
-      <label><select class="inputText" id="dropDownEstados"></select>
-      </label>
-      <p>Tipo</p>
-      <label>
-        <input class="inputText" type="radio" id="casa" name="residencia">Casa
-      </label>
-      <label>
-        <input class="inputText" type="radio" id="apt" name="residencia">Apartamento
-      </label>
-    </fieldset>
-    <fieldset id="teste">
-      <legend>Dados do último emprego</legend>
-      <p>Resumo do Currículo</p>
-      <label for="">
-        <textarea name="resume" class="text-area inputText" id="input-resumo-currículo" cols="" rows="5" maxlength="1000" required autocomplete="off"></textarea>
-      </label>
-      <p>Cargo</p>
-      <label for="">
-        <input class="inputText" type="text" name="cargo" id="input-cargo" maxlength="40" autocomplete="off" required>
-      </label>
-      <p>Descrição do cargo</p>
-      <label>
-        <textarea name="desc-cargo" class="text-area inputText" id="input-desc-cargo" maxlength="500" cols="" rows="5" autocomplete="off" required></textarea>
-      </label>
-      <p>Data de Início</p>
-      <label for="">
-        <input class="inputText" type="text" name="data-inicio" id="input-data-inicio" placeholder="insira a data dd/mm/aaaa" autocomplete="off" required min="1">
-      </label>
-      <br>
-      <br>
-      <button type="submit" id="input-submit">Submit</button>
-    </fieldset>
+  <form class="section">
+    <h1 class="title is-1">Formulário</h1>
+    <h2 class="subtitle is-3">Dados Pessoais</h2>
+    
+    <div class="field">
+      <label class="label">Nome</label>
+      <div class="control">
+        <input class="input is-primary" type="text" name="nome" id="input-nome" placeholder="insira seu nome" maxlength="40" autocomplete="off" required>
+      </div>
+    </div>
+    
+    <div class="field">
+      <label class="label">Email</label>
+      <div class="control">
+        <input class="input is-primary" type="text" name="email" id="input-email" placeholder="insira seu e-mail" maxlength="50" autocomplete="off" required>
+      </div>
+    </div>
+    
+    <div class="field">
+      <label class="label">CPF</label>
+      <div class="control">
+        <input class="input is-primary" type="text" name="cpf" id="input-cpf" placeholder="insira seu CPF" maxlength="11" autocomplete="off" required>
+      </div>
+    </div>
+    
+    <div class="field">
+      <label class="label">Endereço</label>
+      <div class="control">
+        <input class="input is-primary" type="text" name="endereco" id="input-endereco" placeholder="insira seu endereço" maxlength="200" autocomplete="off" required>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Cidade</label>
+      <div class="control">
+        <input class="input is-primary" type="text" name="cidade" id="input-cidade" placeholder="insira sua cidade" maxlength="28" autocomplete="off" required>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Estado</label>
+      <div class="control">
+        <div class="select is-primary">
+          <select id="dropDownEstados"></select>
+        </div>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="control">
+        <label class="radio">
+          <input class="radio" type="radio" id="casa" name="residencia">Casa
+        </label>
+        <label class="radio">
+          <input class="radio" type="radio" id="apt" name="residencia">Apartamento
+        </label>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="control">
+      <label class="label">Resumo do Currículo</label>
+        <textarea name="resume" class="textarea is-small is-primary" id="input-resumo-currículo" cols="" rows="5" maxlength="1000" required autocomplete="off"></textarea>
+      </div>
+    </div>
+      
+    <div class="field">
+      <label class="label">Cargo</label>
+      <div class="control">
+        <input class="input is-primary" type="text" name="cargo" id="input-cargo" maxlength="40" autocomplete="off" required>
+      </div>
+    </div>
+      
+    <div class="field">
+      <label class="label">Descrição do cargo</label>
+      <div class="control">
+        <textarea name="desc-cargo" class="textarea is-small is-primary" id="input-desc-cargo" maxlength="500" cols="" rows="5" autocomplete="off" required></textarea>
+      </div>
+    </div>
+      
+    <div class="field">
+      <label class="label">Data de Início</label>
+      <div class="control">
+        <input class="input is-primary" type="text" name="data-inicio" id="input-data-inicio" placeholder="insira a data dd/mm/aaaa" autocomplete="off" required min="1">
+      </div>
+    </div>
+
+    <div class="field is-grouped">
+      <div class="control">
+        <button class="button is-rounded is-success" type="submit" id="input-submit">Submit</button>
+      </div>
+      <div class="control">
+        <button class="button is-rounded is-danger" type="reset">Limpar</button>
+      </div>
+    </div>
+
   </form>
   <script src="script.js"></script>
 </body>
