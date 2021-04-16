@@ -12,46 +12,52 @@
     <fieldset>
       <legend>Dados Pessoais</legend>
       <p>Nome</p>
-      <label for="input-nome"><input type="text" name="nome" id="input-nome" placeholder="insira seu nome" maxlength="40" autocomplete="off" required>
+      <label for="input-nome"><input class="inputText" type="text" name="nome" id="input-nome" placeholder="insira seu nome" maxlength="40" autocomplete="off" required>
       </label>
       <p>Email</p>
-      <label for="input-email"><input type="text" name="email" id="input-email" placeholder="insira seu e-mail" maxlength="50" autocomplete="off" required>
+      <label for="input-email"><input class="inputText" type="text" name="email" id="input-email" placeholder="insira seu e-mail" maxlength="50" autocomplete="off" required>
       </label>
       <p>CPF</p>
-      <label for="input-cpf"><input type="text" name="cpf" id="input-cpf" placeholder="insira seu CPF" maxlength="11" autocomplete="off" required>
+      <label for="input-cpf"><input class="inputText" type="text" name="cpf" id="input-cpf" placeholder="insira seu CPF" maxlength="11" autocomplete="off" required>
       </label>
       <p>Endereço</p>
-      <label for="input-endereco"><input type="text" name="endereco" id="input-endereco" placeholder="insira seu endereço" maxlength="200" autocomplete="off" required>
+      <label for="input-endereco"><input class="inputText" type="text" name="endereco" id="input-endereco" placeholder="insira seu endereço" maxlength="200" autocomplete="off" required>
       </label>
       <p>Cidade</p>
-      <label for="input-cidade"><input type="text" name="cidade" id="input-cidade" placeholder="insira sua cidade" maxlength="28" autocomplete="off" required>
+      <label for="input-cidade"><input class="inputText" type="text" name="cidade" id="input-cidade" placeholder="insira sua cidade" maxlength="28" autocomplete="off" required>
       </label>
       <p>Estado</p>
-      <label><Select id="dropDownEstados"></Select>
+      <label><select class="inputText" id="dropDownEstados"></select>
       </label>
       <p>Tipo</p>
-      <label for="name">
-        <input type="radio" name="residencia">Casa
-        <input type="radio" name="residencia">Apartamento
+      <label>
+        <input class="inputText" type="radio" id="casa" name="residencia">Casa
+      </label>
+      <label>
+        <input class="inputText" type="radio" id="apt" name="residencia">Apartamento
       </label>
     </fieldset>
     <fieldset id="teste">
       <legend>Dados do último emprego</legend>
       <p>Resumo do Currículo</p>
       <label for="">
-        <textarea name="resume" class="text-area" id="input-resumo-currículo" cols="" rows="5" maxlength="1000" required autocomplete="off"></textarea>
+        <textarea name="resume" class="text-area inputText" id="input-resumo-currículo" cols="" rows="5" maxlength="1000" required autocomplete="off"></textarea>
       </label>
       <p>Cargo</p>
       <label for="">
-        <input type="text" name="cargo" id="input-cargo" maxlength="40" autocomplete="off" required>
+        <input class="inputText" type="text" name="cargo" id="input-cargo" maxlength="40" autocomplete="off" required>
       </label>
       <p>Descrição do cargo</p>
       <label>
-        <textarea name="desc-cargo" class="text-area" id="input-desc-cargo" maxlength="500" cols="" rows="5" autocomplete="off" required></textarea>
+        <textarea name="desc-cargo" class="text-area inputText" id="input-desc-cargo" maxlength="500" cols="" rows="5" autocomplete="off" required></textarea>
       </label>
-      <label for="">Data de Início
-        <input type="text" name="data-inicio" id="input-data-inicio" autocomplete="off" required min="1">
+      <p>Data de Início</p>
+      <label for="">
+        <input class="inputText" type="text" name="data-inicio" id="input-data-inicio" placeholder="insira a data dd/mm/aaaa" autocomplete="off" required min="1">
       </label>
+      <br>
+      <br>
+      <button type="submit" id="input-submit">Submit</button>
     </fieldset>
   </form>
   <script src="script.js"></script>

@@ -1,6 +1,9 @@
 const estadosDropDown = document.querySelector('#dropDownEstados');
-const estadosBrasil = ['Acre', 'Alagoas', 'Amapá', 'Amazonas', 'Bahia', 'Ceará', 'Distrito Federal*', 'Espírito Santo', 'Goiás', 'Maranhão', 'Mato Grosso', 'Mato Grosso do Sul', 'Minas Gerais', 'Pará', 'Paraíba', 'Pernambuco', 'Piauí', 'Rio de Janeiro', 'Rio Grande do Norte', 'Rio Grande do Sul', 'Rondônia', 'Roraima', 'Santa Catarina', 'São Paulo', 'Sergipe', 'Tocantins'];
-const inputDate = document.querySelector('#input-data-inicio');
+const estadosBrasil = ['Acre', 'Alagoas', 'Amapá', 'Amazonas', 'Bahia', 'Ceará', 'Distrito Federal*', 'Espírito Santo', 'Goiás', 'Maranhão', 'Mato Grosso', 'Mato Grosso do Sul', 'Minas Gerais', 'Pará', 'Paraíba', 'Paraná', 'Pernambuco', 'Piauí', 'Rio de Janeiro', 'Rio Grande do Norte', 'Rio Grande do Sul', 'Rondônia', 'Roraima', 'Santa Catarina', 'São Paulo', 'Sergipe', 'Tocantins'];
+const inputSubmitButton = document.querySelector('#input-submit');
+const formDocument = document.querySelector('.inputText');
+const body = document.querySelector('body');
+const backupPDocs = document.querySelector('.backupDocs');
 
 function createSelectsOption(array) {
   for (let estado of array) {
@@ -12,8 +15,23 @@ function createSelectsOption(array) {
 
 createSelectsOption(estadosBrasil);
 
-inputDate.addEventListener('keyup')
-
-function checkDate() {
-
+function preventSubmit(event) {
+  event.preventDefault();
 }
+
+function createDivAndP() {
+  const divOutOfForm = document.createElement('div');
+  const pOutOfForm = document.createElement('p');
+  pOutOfForm.className = 'backupDocs';
+  body.appendChild(divOutOfForm);
+  divOutOfForm.appendChild(pOutOfForm);
+}
+
+function transferTextToP() {
+  let pOutOfForm = document.querySelector('.backupDocs');
+  pOutOfForm.innerText = formDocument.value;
+}
+
+inputSubmitButton.addEventListener('click', preventSubmit);
+inputSubmitButton.addEventListener('click', createDivAndP);
+inputSubmitButton.addEventListener('click', transferTextToP);
