@@ -4,6 +4,7 @@ const inputSubmitButton = document.querySelector('#input-submit');
 const formDocument = document.querySelectorAll('.input');
 const body = document.querySelector('body');
 const backupPDocs = document.querySelector('.backupDocs');
+const form = document.querySelector('.section');
 
 function createSelectsOption(array) {
   for (let estado of array) {
@@ -15,16 +16,16 @@ function createSelectsOption(array) {
 
 createSelectsOption(estadosBrasil);
 
-// function verifyDate() {
-//   let dateInput = document.querySelector('#input-data-inicio');
-//   let days = dateInput.value.substring(0, 2);
-//   let months = dateInput.value.substring(3, 5);
-//   let years = dateInput.value.substring(6);
-//   if (dateInput.value[2] !== '/' || dateInput.value[5] !== '/') alert('Insira a data no formato correto');
-//   if (parseInt(days) > 31 || parseInt(days) < 0) alert('Insira uma data válido');
-//   if (parseInt(months) > 12 || parseInt(months) < 0) alert('Insira um mês válida');
-//   if (parseInt(years) < 0) alert('Insira um ano válido');
-// }
+function verifyDate() {
+  let dateInput = document.querySelector('#input-data-inicio');
+  let days = dateInput.value.substring(0, 2);
+  let months = dateInput.value.substring(3, 5);
+  let years = dateInput.value.substring(6);
+  if (dateInput.value[2] !== '/' || dateInput.value[5] !== '/') alert('Insira a data no formato correto');
+  if (parseInt(days) > 31 || parseInt(days) < 0) alert('Insira uma data válido');
+  if (parseInt(months) > 12 || parseInt(months) < 0) alert('Insira um mês válida');
+  if (parseInt(years) < 0) alert('Insira um ano válido');
+}
 
 function preventSubmit(event) {
   event.preventDefault();
@@ -48,9 +49,10 @@ function transferTextToP() {
 
 function handleSubmit(event) {
   preventSubmit(event);
+  form.checkValidity();
   createDocumentDiv();
   transferTextToP();
-  // verifyDate();
+  verifyDate();
 }
 
 inputSubmitButton.addEventListener('click', handleSubmit);
