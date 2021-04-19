@@ -5,6 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="bulma/css/bulma.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+  <link href="validation.min.css" rel="stylesheet">
   <title>Document</title>
 </head>
 <body>
@@ -39,14 +41,14 @@
         <input class="input is-primary" type="text" name="endereco" id="input-endereco" placeholder="insira seu endereço" maxlength="200" required>
       </div>
     </div>
-
+    
     <div class="field">
       <label class="label">Cidade</label>
       <div class="control">
         <input class="input is-primary" type="text" name="cidade" id="input-cidade" placeholder="insira sua cidade" maxlength="28" required>
       </div>
     </div>
-
+    
     <div class="field">
       <label class="label">Estado</label>
       <div class="control">
@@ -55,7 +57,7 @@
         </div>
       </div>
     </div>
-
+    
     <div class="field">
       <div class="control">
         <label class="radio">
@@ -66,35 +68,35 @@
         </label>
       </div>
     </div>
-
+    
     <div class="field">
       <div class="control">
-      <label class="label">Resumo do Currículo</label>
+        <label class="label">Resumo do Currículo</label>
         <textarea name="resume" class="textarea is-small is-primary" id="input-resumo-currículo" cols="" rows="5" maxlength="1000" required></textarea>
       </div>
     </div>
-      
+    
     <div class="field">
       <label class="label">Cargo</label>
       <div class="control">
         <input class="input is-primary" type="text" name="cargo" id="input-cargo" maxlength="40" required>
       </div>
     </div>
-      
+    
     <div class="field">
       <label class="label">Descrição do cargo</label>
       <div class="control">
         <textarea name="desc-cargo" class="textarea is-small is-primary" id="input-desc-cargo" maxlength="500" cols="" rows="5" required></textarea>
       </div>
     </div>
-      
+    
     <div class="field">
       <label class="label">Data de Início</label>
       <div class="control">
-        <input class="input is-primary" type="text" name="data-inicio" id="input-data-inicio" placeholder="insira a data DD/MM/YYYY" required min="1">
+        <input class="input is-primary" type="text" name="data-inicio" id="datepicker" placeholder="insira a data DD/MM/YYYY" required min="1">
       </div>
     </div>
-
+    
     <div class="field is-grouped">
       <div class="control">
         <button class="button is-rounded is-success" type="submit" id="input-submit">Submit</button>
@@ -103,8 +105,14 @@
         <button class="button is-rounded is-danger" type="reset">Limpar</button>
       </div>
     </div>
-
+    
   </form>
+  <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+  <script src="pikaday.js"></script>
+  <script>
+    var picker = new Pikaday({ field: document.getElementById('datepicker') });
+  </script>
+  <script src="validation.min.js"></script> 
   <script src="script.js"></script>
 </body>
 </html>
