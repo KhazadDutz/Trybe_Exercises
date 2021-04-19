@@ -1,7 +1,7 @@
 const estadosDropDown = document.querySelector('#dropDownEstados');
 const estadosBrasil = ['Acre', 'Alagoas', 'Amapá', 'Amazonas', 'Bahia', 'Ceará', 'Distrito Federal*', 'Espírito Santo', 'Goiás', 'Maranhão', 'Mato Grosso', 'Mato Grosso do Sul', 'Minas Gerais', 'Pará', 'Paraíba', 'Paraná', 'Pernambuco', 'Piauí', 'Rio de Janeiro', 'Rio Grande do Norte', 'Rio Grande do Sul', 'Rondônia', 'Roraima', 'Santa Catarina', 'São Paulo', 'Sergipe', 'Tocantins'];
 const inputSubmitButton = document.querySelector('#input-submit');
-const formDocument = document.querySelectorAll('.inputText');
+const formDocument = document.querySelectorAll('.input');
 const body = document.querySelector('body');
 const backupPDocs = document.querySelector('.backupDocs');
 
@@ -15,29 +15,42 @@ function createSelectsOption(array) {
 
 createSelectsOption(estadosBrasil);
 
+function verifyDate() {
+  let dateInput = document.querySelector('#input-data-inicio');
+  let days = dateInput.value.substring(0, 2);
+  let months = dateInput.value.substring(3, 5);
+  let years = dateInput.value.substring(6);
+  if (dateInput.value[2] !== '/' || dateInput.value[5] !== '/') alert('Insira a data no formato correto');
+  if (parseInt(days) > 31 || parseInt(days) < 0) alert('Insira uma data válido');
+  if (parseInt(months) > 12 || parseInt(months) < 0) alert('Insira um mês válida');
+  if (parseInt(years) < 0) alert('Insira um ano válido');
+}
+
 function preventSubmit(event) {
   event.preventDefault();
 }
 
-function createDivAndP() {
+function createDocumentDiv() {
   const divOutOfForm = document.createElement('div');
-  pOutOfForm.className = 'backupDocs';
+  divOutOfForm.className = 'document-backup';
   body.appendChild(divOutOfForm);
 }
 
 function transferTextToP() {
-  let pOutOfForm = document.querySelector('.backupDocs');
   for (let doc of formDocument) {
+    let divOutOfForm = document.querySelector('.document-backup');
     let pOutOfForm = document.createElement('p');
-    pOutOfForm.innerText = formDocument.value;
+    pOutOfForm.className = 'backupDocs';
+    pOutOfForm.innerText = doc.value;
     divOutOfForm.appendChild(pOutOfForm);
   }
 }
 
 function handleSubmit(event) {
   preventSubmit(event);
-  createDivAndP();
+  createDocumentDiv();
   transferTextToP();
+  verifyDate();
 }
 
 inputSubmitButton.addEventListener('click', handleSubmit);
