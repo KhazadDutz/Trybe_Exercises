@@ -12,6 +12,7 @@ body {
 .header-container {
   background-color: #5C687C;
   display: flex;
+  flex-basis: auto;
 }
 
 .logo-container {
@@ -22,6 +23,7 @@ body {
 
 .menu-container {
   display: flex;
+  flex-grow: 1;
   flex-basis: 500px;
 }
 
@@ -45,4 +47,5 @@ body {
 
 .header-container > div:nth-child(1) {
   order: 0;
+  flex: 1 auto;
 }
