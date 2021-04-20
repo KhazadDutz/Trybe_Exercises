@@ -47,9 +47,15 @@ function transferTextToP() {
   }
 }
 
+function verifyInputsValue() {
+  for (let data of formDocument) {
+    if (data.value === '') alert(data + 'obrigatório');
+  }
+}
+
 function handleSubmit(event) {
   preventSubmit(event);
-  form.checkValidity();
+  verifyInputsValue();
   createDocumentDiv();
   transferTextToP();
   verifyDate();
