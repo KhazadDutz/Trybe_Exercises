@@ -59,6 +59,7 @@ body {
 .movie-container {
   display: flex;
   flex-direction: column;
+  flex-grow: 10;
   flex-basis: 700px;
 }
 
