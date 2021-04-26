@@ -1,6 +1,175 @@
-html {
+* {
+  margin: 0;
   box-sizing: border-box;
 }
-*, *:before, *:after {
+/* *, *:before, *:after {
   box-sizing: inherit;
+} */
+
+@media screen and (min-width: 320px) {
+  * {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: blanchedalmond;
+  }
+
+  header p {
+    text-align: center;
+    font-size: 150%;
+    font-weight: bolder;
+    margin: 5%;
+  }
+  
+  header nav {
+    margin: 3%;
+    font-size: 120%;
+  }
+  
+  aside h2 {
+    text-align: center;
+    margin: 4%;
+    font-size: 130%;
+  }
+  
+  aside ul {
+    margin: 3%;
+    font-size: 120%;
+  }
+  
+  .main-content h1 {
+    margin: 5%;
+    font-size: 140%;
+    text-align: center;
+    font-weight: bolder;
+  }
+  
+  .main-content p {
+    text-align: justify;
+    margin: 3%;
+    font-size: 115%;
+  }
+  
+  footer h3 {
+    text-align: center;
+    font-size: 120%;
+    margin: 4%;
+  }
+  
+  footer p {
+    text-align: justify;
+    margin: 3%;
+    font-size: 100%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  * {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: burlywood;
+  }
+
+  header p {
+    text-align: center;
+    font-size: 140%;
+    font-weight: bolder;
+    margin: 5%;
+  }
+  
+  header nav {
+    margin: 2%;
+    font-size: 110%;
+  }
+  
+  aside h2 {
+    text-align:start;
+    margin: 3%;
+    font-size: 120%;
+  }
+  
+  aside ul {
+    margin: 2%;
+    font-size: 110%;
+  }
+  
+  .main-content h1 {
+    margin: 5%;
+    font-size: 130%;
+    text-align: center;
+    font-weight: bolder;
+  }
+  
+  .main-content p {
+    text-align: justify;
+    margin: 3%;
+    font-size: 105%;
+  }
+  
+  footer h3 {
+    text-align: center;
+    font-size: 110%;
+    margin: 4%;
+  }
+  
+  footer p {
+    text-align: justify;
+    margin: 3%;
+    font-size: 100%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  * {
+    margin: 0;
+    box-sizing: border-box;
+    background-color:darksalmon;
+  }
+
+  header p {
+    text-align: start;
+    font-size: 140%;
+    font-weight: bolder;
+    margin: 2%;
+  }
+  
+  header nav {
+    margin: 0;
+    font-size: 110%;
+  }
+  
+  aside h2 {
+    text-align:start;
+    margin: 2%;
+    font-size: 120%;
+  }
+  
+  aside ul {
+    margin: 0;
+    font-size: 110%;
+  }
+  
+  .main-content h1 {
+    margin: 2%;
+    font-size: 130%;
+    text-align: start;
+    font-weight: bolder;
+  }
+  
+  .main-content p {
+    text-align: justify;
+    margin: 1%;
+    font-size: 105%;
+  }
+  
+  footer h3 {
+    text-align: center;
+    font-size: 100%;
+    margin: 2%;
+  }
+  
+  footer p {
+    text-align: justify;
+    margin: 1%;
+    font-size: 95%;
+  }
 }
