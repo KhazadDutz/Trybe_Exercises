@@ -21,4 +21,17 @@ const lesson3 = {
 const allLessons = {};
 Object.assign(allLessons,{lesson1}, {lesson2}, {lesson3})
 
-console.log(allLessons);
+// function calculateTotalStudents(object) {
+//   console.log(object.lesson1.numeroEstudantes + object.lesson2.numeroEstudantes + object.lesson3.numeroEstudantes);
+// }
+
+// calculateTotalStudents(allLessons)
+
+function calculateTotalStudents(object) {
+  let totalStudents = [];
+  for (let lessons in object) {
+    console.log(lessons);
+    lessons.numeroEstudantes;
+  }
+}
+console.log(calculateTotalStudents(allLessons));

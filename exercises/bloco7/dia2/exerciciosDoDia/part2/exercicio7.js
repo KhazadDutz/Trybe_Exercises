@@ -18,7 +18,13 @@ const lesson3 = {
   turno: 'noite',
 };
 
-const allLessons = {};
-Object.assign(allLessons,{lesson1}, {lesson2}, {lesson3});
+function getValueByNumber(object, index) {
+  let arrayOfObject = Object.values(object);
+  for (let key in arrayOfObject) {
+    if (key == index) {
+      return arrayOfObject[key];
+    }
+  }
+}
 
-console.log(allLessons);
+console.log(getValueByNumber(lesson1, 3));

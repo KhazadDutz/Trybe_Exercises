@@ -18,7 +18,11 @@ const lesson3 = {
   turno: 'noite',
 };
 
-const allLessons = {};
-Object.assign(allLessons,{lesson1}, {lesson2}, {lesson3});
+function checkKeyValue(object, keyname, keyvalue) {
+  
+}
 
-console.log(allLessons);
+console.log(verifyPair(lesson3, 'turno', 'noite'));
+// Output: true,
+console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
+// Output: false
