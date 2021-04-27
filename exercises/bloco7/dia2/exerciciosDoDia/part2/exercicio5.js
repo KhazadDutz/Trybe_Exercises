@@ -17,11 +17,3 @@ const lesson3 = {
   professor: 'Maria Clara',
   turno: 'noite',
 };
-
-function listValues(object) {
-  return Object.values(object);
-}
-
-console.log(listValues(lesson1));
-console.log(listValues(lesson2));
-console.log(listValues(lesson3));
