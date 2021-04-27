@@ -17,13 +17,3 @@ const lesson3 = {
   professor: 'Maria Clara',
   turno: 'noite',
 };
-
-function showObjectLength(object) {
-  return Object.entries(object).length;
-}
-
-console.log(showObjectLength(lesson1));
-
-console.log(showObjectLength(lesson2));
-
-console.log(showObjectLength(lesson3));
