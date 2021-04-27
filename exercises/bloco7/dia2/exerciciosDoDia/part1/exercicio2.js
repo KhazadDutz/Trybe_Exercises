@@ -34,7 +34,6 @@ const order = {
   },
 };
 
-
 const orderModifier = (order) => {
   const info = {
     name: 'Luiz Silva'
@@ -47,9 +46,7 @@ const orderModifier = (order) => {
   }
 
   let newRegistration = Object.assign(order, info, pay);
-  
   console.log(`Olá ${newRegistration.name} o total do seu pedido de Muzzarella, calabresa e ${newRegistration.order.drinks.coke.type} é R$${newRegistration.payment.total},00.`);
-
 }
 
 orderModifier(order);
