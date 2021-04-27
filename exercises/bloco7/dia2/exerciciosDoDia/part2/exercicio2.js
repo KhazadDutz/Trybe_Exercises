@@ -18,10 +18,10 @@ const lesson3 = {
   turno: 'noite',
 };
 
-function createKeyValueObj(object, key, value) {
-  object[key] = value;
-  console.log(object);
+function listKeys(object) {
+  return Object.keys(object);
 }
 
-createKeyValueObj(lesson2, 'turno', 'manhã');
-
+console.log(listKeys(lesson1));
+console.log(listKeys(lesson2));
+console.log(listKeys(lesson3));

@@ -17,11 +17,3 @@ const lesson3 = {
   professor: 'Maria Clara',
   turno: 'noite',
 };
-
-function createKeyValueObj(object, key, value) {
-  object[key] = value;
-  console.log(object);
-}
-
-createKeyValueObj(lesson2, 'turno', 'manhã');
-
