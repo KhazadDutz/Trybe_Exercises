@@ -21,16 +21,14 @@ const lesson3 = {
 function verifyPair(object, keyName, keyValue) {
   let arrayObject = Object.entries(object);
   for (let key in arrayObject) {
-    if (arrayObject[key][0] === keyName && arrayObject[key][1] === keyValue) return 'true';
-    console.log(arrayObject[key][0]);
-    console.log('-----------');
-    console.log(arrayObject[key][1]);
-    // console.log(arrayObject[key][1]);
-    // if (arrayObject[key][0] !== keyName || arrayObject[key][1] !== keyValue) return 'false';
+    if (arrayObject[key][0] === keyName && arrayObject[key][1] === keyValue) { 
+      return 'true';
+    }
+      return 'false'
   }
 }
 
 console.log(verifyPair(lesson3, 'turno', 'noite'));
 // Output: true,
-// console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
+console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
 // Output: false,
