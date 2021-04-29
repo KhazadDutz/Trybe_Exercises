@@ -24,8 +24,8 @@ function verifyPair(object, keyName, keyValue) {
     if (arrayObject[key][0] === keyName && arrayObject[key][1] === keyValue) { 
       return 'true';
     }
-      return 'false'
   }
+  return 'false'
 }
 
 console.log(verifyPair(lesson3, 'turno', 'noite'));
