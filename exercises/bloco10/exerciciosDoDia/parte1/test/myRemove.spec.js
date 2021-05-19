@@ -18,6 +18,6 @@ describe('Verifica se myRemove retorna o array esperado', () => {
   });
   // // d) Verifique se a chamada myRemove([1, 2, 3, 4], 5) retorna o array esperado
   it('Retorna o array sem alterações', () => {
-    expect(myRemove([1, 2, 3, 4], 5).toEqual([1, 2, 3, 4]));
+    expect(myRemove([1, 2, 3, 4], 5)).toBe([1, 2, 3, 4]);
   });
 });
