@@ -8,6 +8,8 @@ function calcArea(base, height) {
   return (base * height) / 2;
 }
 
+console.log(calcArea(8, 4));
+
 // Desafio 3
 function splitSentence(frase) {
   return frase.split(' ');
@@ -25,16 +27,18 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function getHighest(numbers) {
-  return numbers.reduce((acc, curr) => acc > curr ? acc : curr)
+  return numbers.reduce((acc, curr) => (acc > curr ? acc : curr));
 }
 
-function highestCount(numbers, func) {
+function highestCount(numbers) {
   let count = 0;
-  numbers.filter((number) => number === func(numbers) ? count += 1 : count)
+  numbers.filter((number) =>
+    number === getHighest(numbers) ? (count += 1) : count
+  );
   return count;
 }
 
-console.log(highestCount([9, 1, 2, 3, 9, 5, 6, 7], getHighest))
+console.log(highestCount([9, 1, 2, 3, 9, 5, 6, 7], getHighest));
 
 // Desafio 7
 function catAndMouse(mousePosition, catOnePosition, catTwoPosition) {
@@ -49,6 +53,7 @@ function catAndMouse(mousePosition, catOnePosition, catTwoPosition) {
   return 'os gatos trombam e o rato foge';
 }
 console.log(catAndMouse(10, 4, 22));
+
 // Desafio 8
 function fizzBuzzElement(number) {
   if (number % 15 === 0) return 'fizzBuzz';
@@ -58,15 +63,9 @@ function fizzBuzzElement(number) {
 }
 
 function fizzBuzz(arr) {
-  let newArr = [];
-  for (let number of arr) {
-    newArr.push(fizzBuzzElement(number));
-  }
-  return newArr;
+  return arr.map((number) => fizzBuzzElement(number));
 }
 
-let lista = [2, 15, 7, 9, 45];
-console.log(fizzBuzz(lista));
 // Desafio 9
 function encodeElement(letter) {
   if (letter === 'a') return '1';
@@ -114,6 +113,7 @@ function techList(array, name) {
   }
   return newObject;
 }
+
 // Desafio 11
 function areNumbersRepeatedTooMuch(array) {
   for (let numbers of array) {
@@ -144,6 +144,7 @@ function generatePhoneNumber(array) {
 
 let phoneNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 console.log(generatePhoneNumber(phoneNumber));
+
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if (lineC < lineA + lineB && lineC > Math.abs(lineB - lineA)) return true;
@@ -151,6 +152,7 @@ function triangleCheck(lineA, lineB, lineC) {
   if (lineB < lineA + lineC && lineB > Math.abs(lineC - lineA)) return true;
   return false;
 }
+
 // Desafio 13
 function transformStringToArray(string) {
   return string.split(' ');
